@@ -1,0 +1,68 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('https://af-production.s3.amazonaws.com/photos/images/76458/original/books.jpg');">
+			<div class="wrap-login100">
+
+                <form  method="post" action="/manage/book/add"  class="login100-form validate-form">
+                    
+					<span class="login100-form-logo">
+						<i class="fa fa-book"></i>
+					</span>
+
+					<span class="tlt login100-form-title p-b-34 p-t-27">
+						ADD a Book 
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter title">
+						<input autocomplete="off" class="input100" type="text" name="title" placeholder="Enter title">
+						
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter author">
+						<input autocomplete="off" class="input100" type="text" name="author" placeholder="Enter author">
+						
+					</div>
+            <div class="wrap-input100 validate-input" data-validate = "Enter publisher">
+                    <input autocomplete="off" class="input100" type="text" name="publisher" placeholder="Enter publisher">
+                    
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter price">
+                    <input autocomplete="off" class="input100" type="number" name="price" placeholder="Enter price $">
+                    
+                </div>
+                <div class="wrap-input100 " >
+               <select required class="form-control" name="category" id="">
+                   <option value="">.....</option>
+                   {#categories}  
+                    <option value="{.name}" >{.name}
+                   </option>        
+                    {/categories}
+               </select>
+            </div>
+
+            <div class="wrap-input100 validate-input" >
+                    <textarea required  placeholder="Enter Description" name="description" id=""  class="form-control" cols="30" rows="4">
+
+                    </textarea>
+                    <input autocomplete="off" type="hidden" name="_csrf" value="{_csrf}">
+                </div>
+
+    
+    
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							ADD&nbsp;<i class = "fa fa-plus"></i>
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+{/body}

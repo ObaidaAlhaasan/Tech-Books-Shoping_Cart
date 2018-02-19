@@ -1,0 +1,45 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('https://af-production.s3.amazonaws.com/photos/images/76458/original/books.jpg');">
+			<div class="wrap-login100">
+
+                <form  method="post" action="/manage/category/add"  class="login100-form validate-form">
+                    
+					<span class="login100-form-logo">
+						<i class="fa fa-tags"></i>
+					</span>
+
+					<span class="tlt login100-form-title p-b-34 p-t-27">
+						ADD Category 
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter Name">
+						<input autocomplete="off" class="input100" type="text" name="name" placeholder="Enter Category Name">
+						
+					</div>
+
+            <div class="wrap-input100 validate-input" >
+                    <textarea required  placeholder="Enter Description" name="description" id=""  class="form-control" cols="30" rows="4">
+
+                    </textarea>
+                    <input autocomplete="off" type="hidden" name="_csrf" value="{_csrf}">
+                </div>
+
+    
+    
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							ADD&nbsp;<i class = "fa fa-plus"></i>
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+{/body}

@@ -1,0 +1,42 @@
+
+{>"layouts/manage" /}
+
+{<body}
+<div class="container">
+  <div class="page-header text-center">
+    <h1  > <strong style="    font-size: 75px;
+      text-shadow: 4px 4px 10px cornflowerblue;"class="tlt"> Manage Page </strong> <i style=" text-shadow: 4px 4px 10px cornflowerblue;" class="fa fa-gear fa-fw  fa-spin fa-2x"></i> </h1>
+    <hr>
+  </div>
+    <div class="row">
+      <div class="col-xs-10 col-md-6 ">
+        <div class="jumbotron">
+          <h3 class="display-4">Book Page</h3>
+          <img style="width :75%; height:200px;  "src="https://st-takla.org/Gallery/var/albums/Books/General-and-Writing/www-St-Takla-org--Book-01.jpg?m=1419425451"   class="img-responsive img-rounded" alt="">
+          <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae excepturi eligendi nostrum perspiciatis explicabo ducimus provident rem quos voluptatum alias unde totam fugit soluta expedita, eveniet odit veniam dolores?
+          </p>
+          <hr class="my-2">
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/manage/books">Book Manage</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-10 col-md-6">
+        <div class="jumbotron">
+          <h4 class="display-4">Ctaegory Page</h4>
+          <img src="https://criticalphysio.net/wp-content/uploads/2017/07/Categories.jpg" alt="category" class="img-responsive img-rounded" style="width :75%; height:200px; ">
+          <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint recusandae excepturi eligendi nostrum perspiciatis explicabo ducimus provident rem quos voluptatum alias unde totam fugit soluta expedita, eveniet odit veniam dolores?
+          </p>
+          <hr class="my-2">
+          <p class="lead">
+            <a class="btn btn-warning btn-lg" href="/manage/category" >Ctaegory Manage</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{/body}

@@ -1,0 +1,29 @@
+{>"layouts/master" /}
+
+{<body}
+
+
+
+   <div  class="container" >
+    <div class="row">
+    {#books}
+
+        <div class="col-xs-1  col-lg-4">               
+        <div class="card" >
+            <img class="card-img-top img-responsive" src="{.cover}" alt="javascript O'RELLY Book">
+            <div class="card-block">
+            <h4 class="card-title">{.title}</h4>
+            <p class="card-text">{.limittext} </p>
+                <a  style="margin-bottom:10px" class="btn btn-sm btn-secondary" href="/books/details/{._id}"> Book Details   </a>
+            <hr>
+            <a href="#" class="btn btn-primary">Buy it Now.. <i class="fa fa-fw fa-lg fa-shopping-basket"></i> </a>
+            <div class="badge pull-right  badge-warning">${.price}</div>
+            </div>
+        </div>
+     </div>    
+     {/books}
+
+           
+        </div>
+    </div>
+{/body}

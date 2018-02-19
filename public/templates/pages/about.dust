@@ -1,0 +1,26 @@
+{>"layouts/master" /}
+
+{<body}
+
+<div class="container">
+
+    <div class="row">
+        <div class="page-header">
+            <h1>  <strong class="tlt">About us</strong> <small>with our Love <i class=" fa fa-fw fa-heart fa-2x animated infinite  pulse"></i> </small>   </h1>
+            <hr>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+            <img src="" alt="About us" class="img-responsive img-rounded">
+        </div>
+        <div class="col-xs-6 col-md-6">
+                <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, sequi amet qui velit atque debitis voluptatibus fugit pariatur facere, nobis itaque quisquam ratione molestias saepe nemo, quos optio. Dicta, sed?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi atque eaque at odio quam obcaecati consequuntur velit esse sint ex repellat incidunt ullam aut accusamus, iure modi maxime. Voluptatem, perferendis.
+                    </p>
+        </div>
+
+    </div>
+
+</div>
+{/body}

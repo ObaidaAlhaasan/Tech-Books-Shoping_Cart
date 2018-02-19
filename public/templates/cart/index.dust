@@ -1,0 +1,79 @@
+{>"layouts/master" /}
+
+{<title}
+Your Cart
+{/title}
+
+{<body}
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Your shoping cart   <small> <a href="#"> Empty Cart </a></small></h2>
+        {?cart.items}
+
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>Item</th>
+                    <th>Qantity</th>
+                    <th>Price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {#cart.items}
+                <tr>
+                    <td >  {.title}</td>
+                    <td>{.qty}</td>
+                    <td> {.price} </td>
+                </tr>
+                {/cart.items}
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Total : <strong>${cart.total}</strong></h4>
+            </div>
+            <div class="col-xs-6">
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <!-- Specifies Buy Now Button -->
+                <input type="hidden" name="cmd" value="_xclick">
+                <!-- paypal email -->
+                <input type="hidden" name="business" value="shadow616js@gmail.com">
+                <!-- item name -->
+                <input type="hidden" name="item_name" value="Book store">
+                
+                <!-- currency code   -->
+                <input type="hidden" name="currency_code" value="USD">
+                <!-- item ID -->
+                <input type="hidden" name="number" value="1">
+
+                <!-- price   -->
+                <input type="hidden" name="amount" value="{cart.total}">
+
+                <!-- specify shipping -->
+                <input type="hidden" name="no_shipping" value="1">
+
+                                
+                <!-- return  mothod -->
+                <input type="hidden" name="rm" value="2">
+
+                <!-- return  url -->
+                <input type="hidden" name="return" value="http://localhost:4000">
+
+
+                <!-- cancel return  url -->
+                <input type="hidden" name="cancel_return" value="http://localhost:4000">
+                    <!-- button -->
+                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_107*26.png" name="submit" alt="Buy Now">
+                </form>
+            </div>
+        </div>
+        {:else}
+        <p>There are no items in your cart</p>
+    {/cart.items}
+    </div>
+    </div>
+    </div>
+{/body}

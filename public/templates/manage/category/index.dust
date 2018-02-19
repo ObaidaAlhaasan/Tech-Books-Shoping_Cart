@@ -1,0 +1,40 @@
+{>"layouts/manage" /}
+
+{<body}
+<div class="card">
+    <h3 class="card-header text-center font-bold font-up py-4">Ctegories  table</h3>
+    <div class="card-body">
+        <div id="table" class="table-editable">
+            <span class="table-add float-right mb-3 mr-2"><a style="padding: 10px;
+                font-size: 15px;" href="/manage/category/add" class="badge badge-success">ADD Category<i class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
+            <table class="table table-bordered table-responsive-md table-striped text-center">
+
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Edit</th>
+                    <th class="text-center">Remove</th>
+                    
+                    
+                </tr>
+                
+               
+                <!-- This is our clonable table line -->
+                {#categories}
+                <tr class="hide">
+                    <td class="pt-3-half"  >{._id}</td>
+                    <td class="pt-3-half"  >{.name}</td>
+                    
+                    <td class="pt-3-half">
+                            <a href="/manage/category/edit/{._id}" class="table-info"><button type="button" class="btn btn-info btn-rounded btn-sm my-0">Edit <i class="fa fa-fw fa-edit"></i></button></a>
+                    </td>
+                    <td>
+                        <button data-id="{._id}" type="button" class="RemoveCat btn btn-danger btn-rounded btn-sm my-0">Remove <i class="fa fa-fw fa-close"></i></button>
+                    </td>
+                </tr>
+                {/categories}
+            </table>
+        </div>
+    </div>
+</div>
+{/body}
